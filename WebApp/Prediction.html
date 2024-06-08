@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img alt="logo" src="./images/images (3).png">
+        </div>
+        <div id="open" class="icon-container">
+            <img alt="open-menu" src="./images/icon-menu.svg">
+        </div>
+        <nav id="navbar">
+            <div class="menu">
+                <div class="image-close-container">
+                    <img id="close" src="./images/icon-menu-close.svg" alt="close">
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a href="./index.html">Home</a></li>
+                    <li class="menu-list-item"><a href="./symptoms.html">Symptoms</a></li>
+                    <li class="menu-list-item"><a href="./Treatment.html">Treatment</a></li>
+                    <li>
+                        <a href="./kidneycancer.html" class="menu-list-dropdown">Predict +</a>
+                        <ul class="dropdown">
+                            <li class="inner-menu"><a href="./kidneycancer.html">Kidney Cancer</a></li>
+                            <li class="inner-menu"><a href="./breastcancer.html">Breast Cancer</a></li>
+                            <li class="inner-menu"><a href="./heartcancer.html">Heart Cancer</a></li>
+                            <li class="inner-menu"><a href="./lungcancer.html">Lung Cancer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1>Prediction</h1>
+
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+</body>
+</html>

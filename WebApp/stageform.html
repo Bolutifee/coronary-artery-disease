@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CAD Stage Prediction</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="./images/icon-menu.svg">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="./images/icon-menu-close.svg" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="./index.html">Home</a></li>
+                <li class="menu-list-item"><a href="./causes&prevent.html">Causes & Prevention</a></li>
+                <li class="menu-list-item"><a href="./symptoms.html">symptoms</a></li>
+                <li class="menu-list-item"><a href="./treatment.html">Treatment Options</a></li>
+                <li>
+                    <a href="./cadform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="./cadform.html">CAD Prediction Form</a></li>
+                        <li class="inner-menu"><a href="./stageform.html">CAD Stage Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="prediction-form">
+            <h1 class="prediction-title">CAD Stage Prediction Form</h1>
+            <div class="prediction-container">
+                <form action = "result" class="first-container">
+                    <div class="second-container">
+                        <div class="inner-form">
+                            <label for="user">Age</label>
+                            <input type = "text" class = input name = n1 id = 'age' placeholder="age">
+                            <h3>age in years</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Sex</label>
+                            <input type = "text" class = input name = n1 id = 'sex' placeholder="sex">
+                            <h3>sex (1 = male; 0 = female)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Chest Pain Type</label>
+                            <input type = "text" class = input name = n1 id = 'chest_pain_type' placeholder="chest_pain_type">
+                            <h3>(1 = typical angina; 2 = atypical angina; 3 = non-anginal pain; 4 = asymptomatic)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Resting Blood Pressure</label>
+                            <input type = "text" class = input name = n1 id = 'rest_blood_press' placeholder="rest_blood_press">
+                            <h3>resting blood pressure ( in mm Hg on admission to the hospital)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Cholestorol</label>
+                            <input type = "text" class = input name = n2 id = 'cholesterol' placeholder="cholesterol">
+                            <h3>serum cholestorol in mg/dl</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Fasting Blood Sugar</label>
+                            <input type = "text" class = input name = n1 id = 'fasting_blood_sugar' placeholder="fasting_blood_sugar">
+                            <h3>fasting blood sugar > 120 mg/dl (1 = true; 0 = false)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Resting Electrocardiographic Results</label>
+                            <input type = "text" class = input name = n1 id = 'restecg' placeholder="restecg">
+                            <h3>(0 = normal; 1 = having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV); 
+                                2 = showing probable or definite left ventricular hypertrophy by Estes' criteria)</h3>
+                        </div>
+                    </div>
+                    <div class="third-container">
+                        <div class="inner-form">
+                            <label for="user">Maximum Heart Rate</label>
+                            <input type = "text" class = input name = n5 id = 'max_heart_rate' placeholder="max_heart_rate">
+                            <h3>maximum heart rate achieved</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Exercise Induced Angina</label>
+                            <input type = "text" class = input name = n1 id = 'exer_ind_angina' placeholder="exer_ind_angina">
+                            <h3>exang (1 = yes; 0 = no)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">ST depression</label>
+                            <input type = "text" class = input name = n1 id = 'st_depression' placeholder="st_depression">
+                            <h3>ST depression induced by exercise relative to rest</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Slope</label>
+                            <input type = "text" class = input name = n1 id = 'st_slope' placeholder="st_slope">
+                            <h3>the slope of the peak exercise ST segment (1 = upsloping; 2 = flat; 3 = downsloping)</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Number of Major Vessels</label>
+                            <input type = "text" class = input name = n1 id = 'num_major_vessels' placeholder="num_major_vessels">
+                            <h3>number of major vessels (0-3) colored by fluoroscopy</h3>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Red Blood Cells</label>
+                            <input type = "text" class = input name = n1 id = 'thallium_scint' placeholder="thallium_scint">
+                            <h3>(3 = normal; 6 = fixed defect; 7 = reversable defect)</h3>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="click-btn">
+                <button type="submit" value="submit" class="click">PREDICT</button>
+            </div>
+        </div>
+    </main>    
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+    </script>
+
+</body>
+</html>
