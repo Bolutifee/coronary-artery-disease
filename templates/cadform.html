@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>CAD Prediction</title>
+</head>
+<body>
+    <div id="open" class="icon-container">
+        <img alt="open-menu" src="{% static 'images/icon-menu.svg' %}">
+    </div>
+    <nav id="navbar">
+        <div class="menu">
+            <div class="image-close-container">
+                <img id="close" src="{% static 'images/icon-menu-close.svg' %}" alt="close">
+            </div>
+            <ul class="menu-list">
+                <li class="menu-list-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="menu-list-item"><a href="{% url 'causes_prevention' %}">Causes & Prevention</a></li>
+                <li class="menu-list-item"><a href="{% url 'symptoms' %}">symptoms</a></li>
+                <li class="menu-list-item"><a href="{% url 'treamtment' %}">Treatment Options</a></li>
+                <li>
+                    <a href="./cadform.html" class="menu-list-dropdown">Predict +</a>
+                    <ul class="dropdown">
+                        <li class="inner-menu"><a href="{% url 'cad_prediction' %}">CAD Prediction Form</a></li>
+                        <li class="inner-menu"><a href="{% url 'cad_stage_prediction' %}">CAD Stage Prediction Form</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <form action = "predict_cad">
+            <div class="prediction-form">
+                <h1 class="prediction-title">CAD Prediction Form</h1>
+                <div class="prediction-container">
+                    <div class="second-container">
+                        <div class="inner-form">
+                            <label for="user">Age</label>
+                            <input type = "text" class = input name="age" id = 'age' placeholder="How old are you?">
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Gender</label>
+                            <select name="gender" id="al" class="input">
+                                <option value="0">Select your gender</option>
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Chest Pain Type</label>
+                            <select name="chest_pain_type" id="al" class="input">
+                                <option value="1">Select your Chest Pain Type</option>
+                                <option value="1">Typical Angina</option>
+                                <option value="2">Atypical Angina</option>
+                                <option value="3">Non-anginal Pain</option>
+                                <option value="4">Asymptomatic</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Resting Blood Pressure</label>
+                            <input type = "text" class = input name="rest_blood_press" id = 'age' placeholder="Enter your resting blood pressure (in mmHg on admission to the hospital)">
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Cholestorol</label>
+                            <input type = "text" class = input name="cholesterol" id = 'age' placeholder="Enter your Serum Cholestorol in mg/dl">
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Fasting Blood Sugar</label>
+                            <select name="fasting_blood_sugar" id="al" class="input">
+                                <option value="0">Is your fasting blood sugar greated than 120mg/dl?</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Resting Electrocardiographic Results</label>
+                            <select name="restecg" id="al" class="input">
+                                <option value="0">What's your resting electrocardiographic result?</option>
+                                <option value="0">Normal</option>
+                                <option value="1">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+                                <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="third-container">
+                        <div class="inner-form">
+                            <label for="user">Maximum Heart Rate</label>
+                            <input type = "text" class = input name="max_heart_rate" id = 'age' placeholder="Enter your maximum heart rate">
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Exercise Induced Angina</label>
+                            <select name="exer_ind_angina" id="al" class="input">
+                                <option value="0">Do you have Exercise Induced Angina?</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">ST depression</label>
+                            <input type = "text" class = input name="st_depression" id = 'age' placeholder="Enter your ST depression induced by exercise relative to rest">
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Slope</label>
+                            <select name="st_slope" id="al" class="input">
+                                <option value="1">What's the slope of your peak exercise ST segment?</option>
+                                <option value="1">Upsloping</option>
+                                <option value="2">Flat</option>
+                                <option value="3">Downsloping</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Number of Major Vessels</label>
+                            <select name="num_major_vessels" id="al" class="input">
+                                <option value="0">What's the number of your major vessels colored by fluoroscopy?</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="inner-form">
+                            <label for="user">Thallium Scint</label>
+                            <select name="thallium_scint" id="al" class="input">
+                                <option value="0">What's your thallium scint?</option>
+                                <option value="3">Normal</option>
+                                <option value="6">Fixed Defect</option>
+                                <option value="7">Reversible Defect</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="click-btn">
+                    <button type="submit" value="submit" class="click">Predict</button>
+                </div>
+                <div class="message-container">
+                    {% if result.output == 0 %}
+                        <div class="alert alert-success text-center" id='alert_msg' style="margin-top: 21px;">
+                            <p>This patient does not have Coronary Artery Disease</p>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-danger text-center" id='alert_msg' style="margin-top: 21px;">
+                            <p>This patient has been diagnosed with Coronary Artery Disease</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+</html>

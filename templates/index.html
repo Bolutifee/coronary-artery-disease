@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" href="assets/images/favicon-32x32.png" >
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div id="open" class="icon-container">
+            <img alt="open-menu" src="{% static 'images/icon-menu.svg' %}">
+        </div>
+        <nav id="navbar">
+            <div class="menu">
+                <div class="image-close-container">
+                    <img id="close" src="{% static 'images/icon-menu-close.svg' %}" alt="close">
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="menu-list-item"><a href="{% url 'causes_prevention' %}">Causes & Prevention</a></li>
+                    <li class="menu-list-item"><a href="{% url 'symptoms' %}">symptoms</a></li>
+                    <li class="menu-list-item"><a href="{% url 'treamtment' %}">Treatment Options</a></li>
+                    <li>
+                        <a href="./cadform.html" class="menu-list-dropdown">Predict +</a>
+                        <ul class="dropdown">
+                            <li class="inner-menu"><a href="{% url 'cad_prediction' %}">CAD Prediction Form</a></li>
+                            <li class="inner-menu"><a href="{% url 'cad_stage_prediction' %}">CAD Stage Prediction Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="top-container">
+            <h1 class="top-title">
+                Introduction to Coronary Artery Disease
+            </h1>
+            <div class="top-content">
+                <p>
+                    Coronary Artery Disease (CAD) is a condition characterized by the narrowing or blockage of the coronary arteries, 
+                    which supply blood to the heart muscle. This restriction is primarily caused by atherosclerosis, a buildup of fatty deposits, 
+                    cholesterol, and other substances on the artery walls. Contributing factors include genetic predisposition, high blood pressure, 
+                    high cholesterol, smoking, diabetes, and lifestyle choices such as poor diet and lack of exercise. Early detection through screening 
+                    and effective management strategies, including lifestyle changes, medications, and procedures like angioplasty or coronary artery 
+                    bypass surgery, are crucial for reducing the risk of heart attacks and improving overall cardiovascular health.
+                </p>
+                <a href="https://www.mayoclinic.org/diseases-conditions/coronary-artery-disease/symptoms-causes/syc-20350613">READ MORE</a>
+            </div>
+        </div>
+    </header>
+
+        <div class="intro">
+            <div class="history">
+                <h1>What is machine learning?</h1>
+            </div>
+            <div class="history-text">
+                <p>
+                    Machine learning is a branch of artificial intelligence (AI) focused on developing algorithms that allow computers to learn 
+                    from and make decisions based on data. The process begins with collecting data, which is split into training, and test sets. Algorithms such as linear 
+                    regression, logistic regression, decision trees, and neural networks analyze this data to identify patterns and make predictions. 
+                    In healthcare, machine learning is particularly useful for predicting diseases like coronary artery disease (CAD). By analyzing 
+                    patient data such as demographics, medical history, and lab results—machine learning models can classify the likelihood of CAD or 
+                    estimate its severity. 
+                </p>
+            </div>
+        </div>
+
+    <!--Kidney container start -->
+    <main>
+        <div class="cell-summary">
+            <section class="cell" id="kidney-cell">
+                <h1 class="cell-title">HISTORY OF THE TREATMENT OF CORONARY ARTERY DISEASE</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'images/heart_organ_human_body_internal_anatomy_blood-512.webp' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            The first coronary artery bypass graft (CABG) in 1960 and the subsequent development of percutaneous coronary 
+                            intervention (PCI) revolutionized the treatment of coronary artery disease (CAD) (Doenst et al, 2022). Treatment 
+                            options for CAD vary based on disease severity and patient symptoms, including medications, surgical procedures, 
+                            and lifestyle changes. Medications such as aspirin, statins, beta-blockers, and calcium channel blockers lower 
+                            cholesterol, manage blood pressure, and prevent blood clots. When medications are insufficient, surgical options 
+                            like angioplasty and stenting, CABG, and, in severe cases, heart transplants are considered. Angioplasty opens 
+                            blocked arteries, sometimes with stent placement, while CABG uses a healthy vessel to bypass blockages. Lifestyle 
+                            changes, including a heart-healthy diet, regular exercise, quitting smoking, and managing stress, are vital for 
+                            improving cardiovascular health (Bansal et al, 2023). Treatment choice depends on blockage location, severity, 
+                            overall health, and other medical conditions.
+                        </p>
+                    </div>
+                    <!-- <div class="kidney-link">
+                        <a href="./kidneycancer.html"> LEARN MORE</a>
+                    </div> -->
+                </div>
+            </section>
+        <!-- Kidney container stop -->
+
+         <!-- Breast container start -->
+            <section class="cell" id="breast-cell">
+                <h1 class="cell-title">HOW THE APP WORKS</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="{% static 'images/predicon.png' %}" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            The web application facilitates the early detection and classification of coronary artery disease (CAD) using machine 
+                            learning algorithms. It features two primary forms for user interaction. In the first form, users enter patient details 
+                            such as age, blood pressure, and cholesterol levels. Upon clicking the "Predict" button, the application analyzes the 
+                            data using a machine learning model to determine if the patient has CAD, displaying the result instantly. 
+                            The second form helps determine the number of major vessels colored by fluoroscopy. Users provide additional health 
+                            information, and the application predicts the number of affected vessels using a specialized model. The result is displayed 
+                            immediately, aiding in further clinical decision-making. 
+                            Additionally, the web app educates users on the causes, prevention, and treatment options for CAD. This app aims to enhance 
+                            CAD diagnosis and management by providing quick, accurate predictions, supporting early intervention, and improving patient 
+                            outcomes while also increasing awareness and knowledge about the disease.
+                        </p>
+                    </div>
+                    <!-- <div class="breast-link">
+                        <a href="./breastcancer.html"> LEARN MORE</a>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+        <!-- Breast container stop -->
+
+         <!-- Heart container start -->
+        <!-- <div class="cell-summary">
+            <section class="cell" id="heart-cell">
+                <h1 class="cell-title">Heart Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="./images/icons8-heartbeat-50.png" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Heart cancer, also known as primary cardiac tumor, is an extremely rare condition. Malignant tumors 
+                            originating in the heart are uncommon, with the majority of heart tumors being noncancerous. Due to 
+                            its rarity, heart cancer has limited scientific research and understanding. The treatment strategies 
+                            for heart cancer are not well-established due to its uncommon occurrence. In cases of primary cardiac 
+                            tumors, surgical removal of the tumor is typically performed. For malignant or metastatic tumors, a 
+                            combination of surgical intervention, chemotherapy, and radiation therapy may be considered. Given the 
+                            limited knowledge about heart cancer, it is crucial to consult with healthcare professionals who 
+                            specialize in cardiac conditions for accurate diagnosis and appropriate treatment options. 
+                            Collaborative discussions between the patient, oncologists, and cardiologists are essential to develop 
+                            an individualized treatment plan. As heart cancer remains an exceedingly rare condition, continued 
+                            research efforts are needed to improve our understanding and develop more targeted treatment approaches.
+                        </p>
+                    </div>
+                    <div class="heart-link">
+                        <a href="./heartcancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section> -->
+        <!-- Heart container stop -->
+
+        <!-- Lung container start -->
+            <!-- <section class="cell" id="lung-cell">
+                <h1 class="cell-title">Lung Cancer</h1>
+                <div class="cell-container">
+                    <div class="cell-image">
+                        <img class="ribbon1" src="./images/icons8-lung-64.png" alt="">
+                    </div>
+                    <div class="cell-documentation">
+                        <p>
+                            Lung cancer is a complex disease that involves the uncontrolled growth of abnormal cells in the lungs. 
+                            It is primarily categorized into two main types: non-small cell lung cancer (NSCLC) and small cell 
+                            lung cancer (SCLC). NSCLC accounts for the majority of cases and includes subtypes such as adenocarcinoma, 
+                            squamous cell carcinoma, and large cell carcinoma. SCLC is less common but tends to grow and spread more 
+                            rapidly. The development of lung cancer is influenced by various genetic and molecular factors. Mutations 
+                            in specific genes, such as EGFR, ALK, KRAS, and ROS1, play a significant role in the initiation and progression 
+                            of lung cancer. Other factors, including environmental exposures like tobacco smoke, air pollution, and occupational 
+                            hazards, contribute to the risk. Advancements in research have led to targeted therapies and immunotherapies that 
+                            specifically target the altered molecules and pathways driving lung cancer growth. Precision medicine approaches 
+                            aim to match treatments with the genetic profiles of individual tumors, allowing for more effective and 
+                            personalized interventions. Ongoing studies continue to unravel the complexities of lung cancer, leading to 
+                            improved understanding and innovative approaches to treatment.
+
+                        </p>
+                    </div>
+                    <div class="lung-link">
+                        <a href="./lungcancer.html"> LEARN MORE</a>
+                    </div>
+                </div>
+            </section>
+        </div> -->
+        <!-- Lung container stop -->
+
+        <!-- World cancer day -->
+        <section>
+            <div>
+
+            </div>
+        </section>
+
+        <section>
+
+        </section>
+
+        <!-- <section class="container6">
+            <div class="imagedisplay1">
+                <div class="imagedisplay2">
+                    <img class="image5" src="./images/images (1).jpg" alt="">
+                </div>
+                <div class="imagedisplay3">
+                    <img class="image6" src="./images/HT-Blog-Breast-Cancer-2.jpg" alt="">
+                    <img class="image7" src="./images/cancer-treatment-options-vector-26661654.jpg" alt="">
+                </div>
+            </div>
+            <div class="imagedisplay"> 
+                <img class="image8" src="./images/cancer-diagnosis-image.jpeg" alt="">       
+            </div>
+        </section> -->
+
+
+        <!-- Footer starts -->
+        <footer>
+            <ul class="footer-list">
+                <li class="footer-list-item"><a href="https://archive.ics.uci.edu/dataset/45/heart+disease">dataset source</a></li>
+                <li class="footer-list-item"><a href="#">reference</a></li>
+                <li class="footer-list-item"><a href="#">Copyright &copy;</a></li>
+            </ul>
+            <div class="footer-image">
+                <a href="https://github.com/Bolutifee"><img src="{% static 'images/github-icon.png' %}" alt=""></a>
+                <a href="https://www.linkedin.com/in/idowu-bolutife-14a827254"><img src="{% static 'images/linkedin-square-icon.png' %}" alt=""></a>
+                <a href="https://twitter.com/thegodlychild?t=OJ7hBy6EZRZqWyIvghOj5Q&s=08"><img src="{% static 'images/twitter-icon.png' %}" alt=""></a>
+            </div>
+        </footer>
+        <!-- Footer stops -->
+
+        
+    </main>
+
+    <script>
+        let open = document.getElementById('open');
+        let close = document.getElementById('close');
+        let navbar = document.getElementById('navbar');
+
+        open.addEventListener('click', function() {
+            navbar.classList.add('show');
+        });
+
+        close.addEventListener('click', function() {
+            navbar.classList.remove('show');
+        });
+
+    </script>
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+
+    <!-- <script>
+
+        const feed = document.querySelector('.feed')
+             input = document.querySelector('.input')
+
+    </script> -->
+</body>
+</html>
