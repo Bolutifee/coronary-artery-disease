@@ -1,0 +1,701 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: Inter, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./cardiovascular.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 20%;
+}
+
+.icon-container {
+    cursor: pointer;
+    float: right;
+    padding-top: 1rem;
+    margin-right: 5%;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+.menu {
+    background-color: rgb(116, 26, 26);
+    margin-left: auto;
+    width: 60%;
+    height: 100%;
+}
+
+.image-close-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+.image-close-container img {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.menu-list-dropdown {
+    text-decoration: none;
+    color: white;
+    margin-right: 5rem;
+}
+
+.menu-list-dropdown:hover {
+    color: var(--Soft-orange);    
+}
+
+.menu-list-item a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+li {
+    margin: 1.5rem 0;
+}
+
+.menu-list-item a:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+
+.inner-menu a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.inner-menu a:hover {
+    color: var(--Soft-orange);
+}
+
+ul li ul.dropdown li {
+    display: block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+ul li ul.dropdown {
+    width: fit-content;
+    padding-right: 0.5rem;
+    background-color: rgb(116, 26, 26);
+    position: absolute;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.intro {
+    margin-top: 4rem;
+    padding: 0rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.history {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.history-text {
+    line-height: 1.5rem;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.top-container {
+    padding: 10rem 0 10rem 1rem;
+    width: 60%;
+}
+
+.top-title {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    margin: 1.5rem 0;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.top-content p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.7rem;
+}
+
+.top-content a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgb(116, 26, 26);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 1rem;
+    margin: 1rem 0rem 2rem 0rem;
+    color: var(--Off-white);
+    border-radius: 1rem;
+}
+
+.top-content a:hover {
+    opacity: 0.8;
+}
+
+.cell {
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cell-summary {
+    padding: 0rem 2rem;
+}
+
+.cell-title {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.cell-documentation {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.ribbon1 {
+    width: 150px;
+    float: right;
+}
+
+.cell-container a {
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 1rem;
+    margin: 1rem 0rem 0rem 0rem;
+    color: var(--Off-white);
+    border-radius: 1rem;
+}
+
+.cell-container a:hover {
+    opacity: 0.8;
+}
+
+#kidney-cell {
+    background-color: rgba(22, 98, 157, 0.806);
+}
+
+#breast-cell {
+    background-color: rgb(220, 73, 73);;
+}
+
+#heart-cell {
+    background-color: rgb(150, 182, 247);
+}
+
+#lung-cell {
+    background-color: rgb(226, 223, 210);
+}
+
+.kidney-link a {
+    background-color: rgb(179, 89, 10);
+}
+
+.breast-link a {
+    background-color: rgb(175, 28, 53);
+}
+
+.heart-link a {
+    background-color: rgb(143, 74, 186);
+}
+
+.lung-link a {
+    background-color: gray;
+}
+
+/* World Cancer day */
+/* .container6 {
+    width: 80%;
+    margin: 0px 45px;
+    border-radius: 10px;
+}
+
+.image5 {
+    width: 100%;
+}
+
+.image6 {
+    width: 49%;
+    margin: 1% 0px; 
+}
+
+.image7 {
+    width: 49%;
+    border-radius: 5px;
+    margin: 1% 0px;
+    margin-left: 0.5%;
+}
+
+.imagedisplay {
+    width: 100%;
+    height: 330px;
+    background: url(./images/cancer-diagnosis-image.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+} */
+
+
+/* Cancer styling */
+
+.cancer-body {
+    margin-bottom: 3rem;
+}
+
+#breast {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./timthumb.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heart {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./AtrialFibrillationTreatmentPrevention.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#kidney {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./CausesofHeartDisease.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lung {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./depositphotos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.focus-container {
+    padding: 10rem 0 10rem 1rem;
+}
+
+.focus-title {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    margin: 1rem 0;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.focus-content p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5rem;
+    width: 65%;
+}
+
+.statistics-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    padding-left: 20%;
+}
+
+.statistics-image img{
+    width: 70%;
+}
+
+.symptoms-container, .prevention-container, .treatment-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+}
+
+.treatment-container {
+    padding-bottom: 0rem;
+}
+
+/* .symptoms-image, .prevention-image, .treatment-image {
+    padding-top: 1rem;
+} */
+
+.symptoms-image img, .prevention-image img, .treatment-image img {
+    border-radius: 2rem;
+    height: 85%;
+    margin-left: 5%;
+}
+
+.symptoms-body h2, .prevention-body h2, .treatment-body h2 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+    width: 70%;
+}
+
+.symptoms-body p, .prevention-body p, .treatment-body p {
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.predict-link {
+    padding: 2rem 4rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    font-size: 18px;
+}
+
+
+/* PREDICTION FORM PAGE */
+
+.prediction-form {
+    padding-top: 3rem;
+}
+
+.prediction-title {
+    border: 1px solid black;
+    margin: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+    padding: 1rem 0rem;
+}
+
+.prediction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2rem 5rem;
+    border-bottom: 5px solid black;
+}
+
+.first-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 10%;
+}
+
+.second-container {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem;
+    border-bottom: 3px solid black;
+}
+
+.third-container {
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    padding: 2rem 2rem;
+    border-bottom: 3px solid black;
+}
+
+.inner-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: rgb(116, 26, 26);
+}
+
+input {
+    height: 40px;
+}
+
+h3 {
+    color: rgb(116, 26, 26);
+    font-weight: lighter;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.click-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click {
+    font-size: 18px;
+    background-color: rgb(116, 26, 26);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    letter-spacing: 2.0px;
+    margin-top: 1rem;
+    color: var(--Off-white);
+}
+
+.click:hover {
+    opacity: 0.8;
+}
+
+/* BMI CALCULATOR */
+
+
+
+/* FOOTER STARTS */
+
+footer {
+    background-color: rgb(116, 26, 26);
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 10%;
+}
+
+.footer-list {
+    margin-top: 1rem;
+}
+
+.footer-list-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-list-item {
+    list-style-type: none;
+    margin-bottom: 1rem;
+} 
+
+.footer-list-item a:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+
+.footer-image {
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+
+.footer-image img {
+    width: 100%;
+    height: 30%;
+    padding: 0 1rem;
+    margin-top: 4rem;
+    border-right: 2px solid black;
+}
+
+
+@media (min-width: 1024px) {
+
+    .image-close-container, .icon-container {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        position: sticky;
+        height: 10%;
+    }
+    
+    .menu {
+        background-color: rgb(116, 26, 26);
+        width: 100%;
+    }
+
+    .menu-list {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-list-item a{
+        color: white;
+
+    }
+    
+    .menu-list-dropdown {
+        color: white;
+    }
+    
+    .inner-menu a {
+        color: white;
+    }
+    
+    ul li ul.dropdown {
+        background-color: rgb(116, 26, 26);
+    }
+
+    .top-container {
+        width: 60%;
+    }
+
+    .top-content p {
+        font-size: 18px;
+    }
+
+    .intro {
+        display: flex;
+    }
+
+    .history {
+        width: 40%;
+        font-size: 25px;
+        margin-right: 1rem;
+    }
+    
+    .history-text {
+        width: 75%;
+        font-size: 18px;
+    }
+
+    .cell-summary {
+        padding: 0rem 4rem;
+    }
+    
+    #breast {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),  url(./timthumb.jpeg);
+    }
+
+    .focus-content p {
+        width: 50%;
+    }
+
+    .statistics-container {
+        flex-direction: row;
+        padding-left: 0;
+    }
+
+    .statistics-image img{
+        width: 500px;
+    }
+
+    .symptoms-container, .prevention-container, .treatment-container {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .symptoms-body, .prevention-body, .treatment-body {
+        width: 43%;
+    }
+
+    .symptoms-image img, .prevention-image img, .treatment-image img {
+        width: 480px;
+    }
+
+    .prevention-image img {
+        margin-top: 2rem;
+    }
+    
+    .prediction-form {
+        padding-top: 0rem;
+    }
+
+    .footer-list-item {
+        margin-top: 1rem;
+    }
+
+    .footer-image {
+        width: 20%;        
+    }
+    
+    .footer-image img {
+        margin-top: 3rem;
+    }
+
+    .first-container {
+        flex-direction: row;
+    }
+
+    .second-container {
+        width: 50%;
+        margin-right: 5%;
+    }
+    
+    .third-container {
+        width: 50%;
+        margin-left: 1rem;
+    }
+    
+    /* .summary-container {
+        width: 50%;
+    } */
+
+    /* .ribbon1 {
+        margin-top: -1rem;
+    } */
+
+    /* .container6 {
+        margin-left: 10%;
+        display: flex;
+    }
+    
+    .imagedisplay {
+        margin: -14px 0% 0px 2% ;
+    } */
+    
+    /* .top-container {
+        width: 100%;
+    } */
+
+    
+    
+}
